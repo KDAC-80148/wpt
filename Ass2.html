@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment2</title>
+    </head>
+    <body>
+        <center> <h2 style="text-decoration: underline;">Calculator </h2></center>
+        <table>
+            <tr>
+                <td> Enter Number 1 </td>
+                <td> <input type="number" id="one" name="firstNum" required="required"> </td>
+            </tr>
+            <tr>
+                <td> Enter Number 2 </td>
+                <td> <input type="number" id="two" name="secondNum" required="required" > </td>
+            </tr>
+            <tr>
+                <td> Result </td>
+                <td> <input type="number" id="result" name="calResult"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" id="myAddBtn" value="Addition" onclick="Add()" >
+                    <input type="button" id="mySubBtn" value="Substracion" onclick="Substract()">
+                    <input type="button" id="myMulBtn" value="Multiplication" onclick="Multiply()">
+                    <input type="button" id="myDivBtn" value="Division" onclick="Divide()">
+                </td>
+                
+            </tr>
+        </table>
+        <script>
+            debugger;
+            var refToNum1 = document.getElementById("one");
+            var refToNum2 = document.getElementById("two");
+            var refToResult = document.getElementById("result");
+            
+            function Add(){
+                var resultA = eval(refToNum1.value) + eval(refToNum2.value);
+                console.log(resultA);
+                refToResult.value = resultA;
+            }
+
+            function Substract(){
+                debugger;
+                var resultS = eval(refToNum1.value) - eval(refToNum2.value);
+                console.log(resultS);
+                refToResult.value = resultS;
+            } 
+            
+            function Multiply(){
+                var resultM = eval(refToNum1.value) * eval(refToNum2.value);
+                console.log(resultM);
+                refToResult.value = resultM;
+            }
+
+            function Divide(){
+                var resultD = eval(refToNum1.value) / eval(refToNum2.value);
+                console.log(resultD);
+                refToResult.value = resultD;
+            }
+
+
+
+        </script>
+    </body>
+</html>
